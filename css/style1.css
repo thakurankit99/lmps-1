@@ -1,0 +1,479 @@
+.portfolio-wrapper [class*="col-"] {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.pf-filter-wrapper {
+  display: none;
+}
+
+.portfolio-item {
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.portfolio-item .thumb {
+  overflow: hidden;
+}
+.portfolio-item .details {
+  color: #fff;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.portfolio-item .details h4 {
+  color: #fff;
+  font-size: 20px;
+  margin: 0 0 10px;
+  padding: 0 20px;
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  transform: translateY(30px);
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  -o-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  position: absolute;
+  top: 60px;
+}
+.portfolio-item .details span.term {
+  color: #fff;
+  background: #283593;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-size: 14px;
+  opacity: 0;
+  display: inline-block;
+  padding: 3px 10px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  -webkit-transform: translateY(-40px);
+  -ms-transform: translateY(-40px);
+  transform: translateY(-40px);
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  -o-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+.portfolio-item .details .more-button {
+  color: #fff;
+  font-size: 20px;
+  display: block;
+  background: #283593;
+  border-radius: 100%;
+  height: 40px;
+  line-height: 42px;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 40px;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio-item .mask {
+  background: #18191a;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio-item:hover .mask {
+  opacity: 0.8;
+}
+.portfolio-item:hover .details h4,
+.portfolio-item:hover .details span {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+.portfolio-item:hover .details .more-button {
+  opacity: 1;
+}
+
+.portfolio-filter {
+  margin-bottom: 25px;
+}
+.portfolio-filter li {
+  color: #2f3640;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio-filter li:hover {
+  color: #283593;
+}
+.portfolio-filter li.current {
+  color: #006dff;
+}
+.portfolio-filter li:not(:last-child) {
+  margin-right: 1.8rem;
+}
+
+select.portfolio-filter-mobile {
+  font-size: 16px;
+  border: 2px solid #283593; /* Add a border for a distinct look */
+  border-radius: 10px;
+  padding: 10px; /* Add padding for better spacing */
+  outline: 0;
+  margin-bottom: 20px; /* Reduced margin for a more compact layout */
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+  background-color: #fff; /* Set a background color for clarity */
+  color: #333; /* Set text color */
+}
+
+.pf-filter-wrapper {
+  position: relative;
+}
+.pf-filter-wrapper:after {
+  content: "";
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 0;
+  right: 20px;
+  color: #000;
+}
+
+.google-map {
+  position: relative;
+  width: 100%;
+  padding-top: 90vh; /* Adjust the value for desired height */
+}
+
+@media (max-width: 768px) {
+  .google-map {
+    padding-top: 177.77%; /* 9:16 Aspect Ratio (9/16 * 100) */
+  }
+}
+
+.google-map iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.rounded {
+  border-radius: 20px !important;
+}
+
+.shadow-dark,
+.desktop-header-3 .dropdown-menu,
+.form-control,
+.form-control:focus {
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(47, 54, 64, 0.1);
+  box-shadow: 0px 5px 20px 0px rgba(47, 54, 64, 0.1);
+}
+
+.centered {
+  width: 350px; /* Set width as needed */
+  margin: 0 auto; /* This will center the div */
+}
+
+#logoOverlay {
+position: absolute;
+bottom: 2.1%; 
+left: 1%;  
+width: 18%;  
+height: 7%;
+background-color: #ffffff; /* Light gray background */
+z-index: 10;    
+display: flex;             
+justify-content: center;   
+align-items: center;      
+font-size: 14px;          
+color: black;
+border: 1px solid #ddd;   /* Add a subtle border */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+border-radius: 4px;       /* Slightly rounded corners */
+font-family: "Ubuntu", sans-serif;
+}
+
+@media (max-width: 768px) { 
+#logoOverlay {
+    bottom: 10.9%;          /* Same as the overlay's bottom (mobile) */
+    left: 0.7%;           /* Same as the overlay's left (mobile) */
+    width: 13%;           /* Match the width of the overlay (mobile) */
+    height: 7%;          /* Increase the height of the box / / Maintain the square shape */
+    font-size: 10px;       /* Decrease font size to fit */
+    font-family: "Ubuntu", sans-serif;
+}
+}
+
+#logoOverlay::before {  /* Add this pseudo-element */
+content: "O-Maps"; 
+display: block;         /* Make it occupy space */
+}
+
+@media (max-width: 768px) { 
+#logoOverlay::before {
+    content: "O-Maps";  /* Change the content for mobile */
+}
+}
+
+
+#Switch360 {
+position: absolute;
+bottom: 10%; 
+left: 1%;  
+width: 6%;  
+height: 8%;
+background-color: #ffffff; /* Light gray background */
+z-index: 10;    
+display: flex;             
+justify-content: center;   
+align-items: center;      
+font-size: 14px;          
+color: black;
+border: 1px solid #ddd;   /* Add a subtle border */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+border-radius: 4px;       /* Slightly rounded corners */
+font-family: "Ubuntu", sans-serif;
+}
+
+@media (max-width: 768px) { 
+#Switch360 {
+    bottom: 20%;          /* Same as the overlay's bottom (mobile) */
+    left: 0.7%;           /* Same as the overlay's left (mobile) */
+    width: 13%;           /* Match the width of the overlay (mobile) */
+    height: 7%;          /* Increase the height of the box / / Maintain the square shape */
+    font-size: 10px;       /* Decrease font size to fit */
+    font-family: "Ubuntu", sans-serif;
+}
+}
+
+#Switch360::before {  /* Add this pseudo-element */
+content: "Switch 2D/360"; 
+display: block;         /* Make it occupy space */
+}
+
+@media (max-width: 768px) { 
+#Switch360::before {
+    content: "Switch 2D/360";  /* Change the content for mobile */
+}
+}
+
+.google-map .bottomRightOverlay { 
+position: absolute;
+bottom: 0;         
+right: 0;           
+width: 25%;        
+height: 2.2%;         
+background-color: #F1EFEC;
+z-index: 11;      
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+.google-map .bottomRightOverlay { /* More specific selector */
+    bottom: 0%; 
+    right: 0;    /* Reset right to auto on mobile */
+    width: 50%; 
+    height: 2.2%;   
+}
+}
+
+.google-map #bottomLeftOverlay { /* Styles for the bottom-left overlay */
+position: absolute;
+bottom: 0;         
+left: 0;           /* Move to the left */
+width: 0%;        
+height: 0%;         
+background-color: #F1EFEC;
+z-index: 11;      
+}
+
+/* Mobile Adjustments (if needed) */
+@media (max-width: 768px) {
+.google-map #bottomLeftOverlay { /* Or your chosen class */
+    bottom: 0%; 
+    left: 0.5%; 
+    width: 50%; 
+    height: 2.2%;   
+}
+}
+
+@media (max-width: 768px) { 
+  #ourguide .row {
+      display: flex; /* or block to reset existing grid styles */
+      flex-direction: column; /* Stack items vertically on mobile */
+      align-items: center;   /* Center items horizontally */
+  }
+
+  #ourguide .col-lg-7 {  
+      width: 100%;   /* Make the profile column take full width */
+      text-align: center; /* Center text within the column */
+  }
+
+  #ourguide .team-item {
+      margin: 0 auto;  /* Center the profile card itself */
+  }
+}
+
+#loadingMessage {
+  display: none;        /* Initially hidden */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the message */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  z-index: 100;        /* Ensure it's above the iframe */
+}
+
+#DroidOverlay {
+  position: absolute;
+  bottom: 85%; 
+  left: 0%;  
+  width: 100%;  
+  height: 18%;
+  background-color: #ffffff; /* Light gray background */
+  z-index: 10;    
+  display: flex;             
+  justify-content: center;   
+  align-items: center;      
+  font-size: 30px;          
+  color: black;
+  border: 1px solid #ddd;   /* Add a subtle border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 4px;       /* Slightly rounded corners */
+  font-family: "Ubuntu", sans-serif;
+  }
+  
+  @media (max-width: 768px) { 
+  #DroidOverlay {
+      bottom: 75%;          /* Same as the overlay's bottom (mobile) */
+      left: 0%;           /* Same as the overlay's left (mobile) */
+      width: 100%;           /* Match the width of the overlay (mobile) */
+      height: 26%;          /* Increase the height of the box / / Maintain the square shape */
+      font-size: 19px;       /* Decrease font size to fit */
+      font-family: "Ubuntu", sans-serif;
+  }
+  }
+  
+  #DroidOverlay::before {  /* Add this pseudo-element */
+  content: "O-Maps Live Street View"; 
+  display: block;         /* Make it occupy space */
+  }
+  
+  @media (max-width: 768px) { 
+  #DroidOverlay::before {
+      content: "O-Maps Live Street View";  /* Change the content for mobile */
+  }
+  }
+
+  .input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.input-container label {
+    margin-bottom: 5px;
+}
+
+.input-container input, .input-container button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.input-container input {
+    width: 200px;
+}
+
+.input-container button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-container button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-container label,
+  .input-container input,
+  .input-container button {
+    margin-bottom: 10px;
+  }
+
+  .input-container input {
+    width: 100%;
+  }
+}
+
+.loading-bar {
+  display: none;
+  width: 100%;
+  height: 4px;
+  background: #ccc;
+  margin-top: 10px;
+}
+
+.loading-bar div {
+  height: 100%;
+  width: 0;
+  background: #007bff;
+  animation: loading 2s infinite;
+}
+
+@keyframes loading {
+  0% {
+      width: 0;
+  }
+  50% {
+      width: 100%;
+  }
+  100% {
+      width: 0;
+  }
+}
+
+#iframeOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  display: none; /* Initially hidden */
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
+}
+
+#iframeOverlay.active {
+  display: flex; /* Show the overlay when inactive */
+}
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mappedin 3D Map</title>
+    <!-- Include Mappedin JS SDK -->
+    <script src="https://mappedin.com/js/web/4.3.0/mappedin.js"></script>
+</head>
+<body>
+    <div id="mappedin-map" style="width: 100%; height: 500px;"></div>
+
+    <script>
+        // Function to fetch map data and display 3D map
+        async function loadMap() {
+            try {
+                // Fetch map data using Mappedin SDK
+                const mapData = await Mappedin.getMapData({
+                    key: '5eab30aa91b055001a68e996',
+                    secret: 'RJyRXKcryCMy4erZqqCbuB1NbR66QTGNXVE0x3Pg6oCIlUR1',
+                    mapId: '660da4b1ae0596d87766f31e'
+                });
+
+                // Display 3D map on the webpage
+                const mapView = await Mappedin.show3dMap(document.getElementById('mappedin-map'), mapData);
+                // Optionally, you can show all labels on the map
+                mapView.Labels.all();
+            } catch (error) {
+                console.error('Error loading map:', error);
+            }
+        }
+
+        // Call the loadMap function when the page is loaded
+        window.addEventListener('load', loadMap);
+    </script>
+</body>
+</html>
